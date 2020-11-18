@@ -4,6 +4,7 @@
          <meta charset="UTF-8">
          <title> Assistência - Andrômeda </title>
          <link rel="stylesheet" href="./css/estilo.css"> 
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
          <style>
              h4{
                  color: yellow;
@@ -17,50 +18,63 @@
             <?php
             include_once('menu.html');
             ?>
-
-            <h2>Assitência tecnica</h2>
+ <div class = "container-fluid text-white bg-secondary  text-warning">
+            <h2>Assitência técnica</h2>
             <hr>
-            <center>
-                
-            <p style="font-size: 120%; color: black;">Realizamos reparos, limpeza, colimação e instalações de instrumentos astronômicos! Atendimento somente na cidade de <b>São Paulo e região.</b></p>
-            <br>
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <form method="POST" action>
+      <div class="form-row">
+        <div class="form-group  col-md-12">
+        <label for="nomeCliente">Nome Completo</label>
+        <input type="text" name="nome" class="form-control" id="nomeCliente">
+        </div>
+
+        <div class="form-group  col-md-6">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" class="form-control" id="telefone" placeholder="+55(DDD)99999-8888">
+        </div>
+
+    
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Serviços</label>
+  <select class="custom-select my-1 mr-sm-2" name="produto" id="inlineFormCustomSelectPref">
+    <option selected>Selecione o serviço desejado</option>
+    <option selected>Selecione</option>
+    <option value="1">Reparos</option>
+    <option value="2">Limpeza</option>
+    <option value="3">Colimação</option>
+    <option value="4">Instalação</option>
+  </select>
+
+  <div class="mb-3">
+    <label for="validationTextarea">Descreva o serviço desejado e as especificações do instrumento</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Por favor descreva o serviço." required></textarea>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+      </label>
+    </div>
+
+  <div>
+  <button type="submit" class="btn btn-success">Enviar pedido</button>
+    </div>
+      </div>
+    </form>
+    </div>
+  </div>
+        
             
-            <div id="area2">
-            <form id="formulario" autocomplete="off">
-                <fieldset> 
-                <h4>Nome completo: </h4>
-                <input type="text" style="width: 400px;">
-
-                <h4>Número de telefone: </h4>
-                <input type="number" style="width: auto;">
-
-                <h4> E-mail: </h4>
-                <input type="text" style="width: 400px;">
-                <br><br>
-                <h4><b>Serviço:</b></h4>
-                <label for="serviço"><strong>Você pode assinalar mais de uma opção:</strong></label><br><br>
-                <input type="radio" id="r" value="reparo" name="reparo">
-                <label for="r"> Reparos</label>
-                <input type="radio" id="l" value="limpeza" name="limpeza">
-                <label for="l">Limpeza</label>
-                <input type="radio" id="c" value="colimação" name="colimação">
-                <label for="c">Colimação</label>
-                <input type="radio" id="i" value="instalação" name="instalação">
-                <label for="i">Instalação</label>
-                <br>
-
-                <h4>Mensagem:</h4>
-                <p>Se necessario explique o reparo que deseja e insira as especificações do instrumento.</p>
-                <textarea style="width: 400px;"></textarea>
-                <input type="submit" value="Enviar"><br><br><br><br>
-                </fieldset>
-            </form>
-             </div>
-            </center>
 
             
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+
 <br><br><br><br><br><br>
 <hr>
 <center>
@@ -73,5 +87,6 @@
 
 <br><br><br>
 <center>&copy;Andrômeda Corporation</center>
+</div>
 </body>    
 </html>

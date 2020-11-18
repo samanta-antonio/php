@@ -4,6 +4,7 @@
      <meta charset="UTF-8">
      <title> Nossas lojas - Andrômeda Instrumentos Astrônomicos</title>
      <link rel="stylesheet" href="./css/estilo.css"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
             <!--Inicio do Menu-->
@@ -12,7 +13,7 @@
             <?php
             include_once('menu.html');
             ?>
-    
+    <div class = "container-fluid text-white bg-secondary">
             <h2>Nossas lojas</h2>
             <hr>
             <br><br><br><br>
@@ -48,8 +49,7 @@
                     </td>
                 </tr>
            </table>    
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+
 <br><br><br><br><br><br>
 <hr>
 <center>
@@ -62,5 +62,6 @@
 
 <br><br><br>
 <center>&copy;Andrômeda Corporation</center>
+</div>
 </body>    
 </html>

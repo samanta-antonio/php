@@ -23,24 +23,24 @@
      <meta charset="UTF-8">
      <title> Produtos - Andrômeda Instrumentação Astronômica</title>
      <link rel="stylesheet" href="./css/estilo.css"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
      <script src="./Js/funcoes.js"></script>
 </head>
+
    <body>
        <!--Inicio Menu-->
        <!--Fim do Menu-->
        <?php
             include_once('menu.html');
        ?>
-
-
-
-
 <header>
+<div class = "container-fluid text-white bg-secondary text-warning">
  <h2>Produtos</h2>
- <div onmouseover="mOver(this)" onmouseout="mOut(this)"
-style="background-color:rgb(247, 15, 15) ;padding:15px; text-align: center;"></div>
-</header>
  <hr>
+</div>
+</header>
+
+<div class = "container-fluid text-white bg-secondary">
 <section class="categorias">
  <div class="categorias">
      <h3 style="color:black;"><b>Categorias</b></h3>
@@ -59,21 +59,23 @@ style="background-color:rgb(247, 15, 15) ;padding:15px; text-align: center;"></d
      
        <?php
 
-       $sql = "select * from produtos";
-       $result = $conn->query($sql);
+       $sql = "SELECT * FROM produtos";
+       $result = $connect->query($sql);
 
        if($result->num_rows > 0){
        while($rows = $result->fetch_assoc()){
       
+       ?>
 
        <div class="box_produtos" id="monoculos_<?php echo $rows["categoria"]; ?>">
-        <img  src="<?php echo $rows["Imagem"]; ?>" width="120px">
+        <img  src="<?php echo $rows["imagem"]; ?>" width="120px">
         <br>
         <p class="descricao"><?php echo $rows["descricao"]; ?></p>
         <hr>
-        <p class="descricao">de<strike><?php echo $rows["preco"]; ?></strike></p><br>
-        <p class="precos"> ou <strong><?php echo $rows["precovista"]; ?></strong> à vista</p><br>
-        <input type="button" onclick="javascript: location.href='./php/solicitar.php';" value="Comprar"/>
+        <p class="descricao">de R$ <strike><?php echo $rows["preco"]; ?></strike> reais por </p><br>
+        <p class="precos"> R$ <strong><?php echo $rows["precovista"]; ?></strong> à vista</p><br>
+        <input type="button" onclick="javascript: location.href='./php/comprar.php';" value="Comprar"/>
+        
      </div>
 
 
@@ -85,9 +87,7 @@ style="background-color:rgb(247, 15, 15) ;padding:15px; text-align: center;"></d
 
        ?>
        
- 
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
+
 <br><br><br><br><br><br>
 
 <hr>
@@ -101,5 +101,7 @@ style="background-color:rgb(247, 15, 15) ;padding:15px; text-align: center;"></d
 
 <br><br><br>
 <center>&copy;Andrômeda Corporation</center>
+    </div>
+    </div>
 </body>    
 </html>

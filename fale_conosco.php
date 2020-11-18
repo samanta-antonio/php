@@ -30,6 +30,7 @@ if(isset($_POST['nome']) && isset($_POST['msg']) && isset($_POST['email'])){
      <meta charset="UTF-8">
      <title> Fale Conosco- Andrômeda Instrumentos Astrônomicos</title>
      <link rel="stylesheet" href="./css/estilo.css"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
      <style>
          h4{
              color: yellow;
@@ -47,7 +48,7 @@ if(isset($_POST['nome']) && isset($_POST['msg']) && isset($_POST['email'])){
         <?php
             include_once('menu.html');
             ?>
-
+<div class = "container-fluid text-white bg-secondary">
 <h2>Contato</h2>
 <hr>
 <center>
@@ -84,5 +85,6 @@ if(isset($_POST['nome']) && isset($_POST['msg']) && isset($_POST['email'])){
 
 <br><br><br>
 <center>&copy;Andrômeda Corporation</center>
+ </div>
 </body>    
 </html>
